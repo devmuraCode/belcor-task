@@ -1,9 +1,3 @@
-import { Link } from 'react-router-dom';
-
-// import { UserAuthForm } from '@/app/examples/authentication/components/user-auth-form';
-import { cn } from '@/lib/utils';
-import { buttonVariants } from '@/widgets/Button';
-
 import { UserAuthForm } from './userLoginForm';
 
 export default function LoginPage() {
