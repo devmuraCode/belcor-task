@@ -1,4 +1,3 @@
-import AuthenticationPage from './ui/Login';
-import { UserAuthForm } from './ui/userLoginForm';
+import LoginPage from './ui/LoginPage';
 
-export { AuthenticationPage, UserAuthForm };
+export { LoginPage };

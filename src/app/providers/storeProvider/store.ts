@@ -2,13 +2,12 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
 import { currentUserReducer } from '@/entities/user';
 import quizzesSlice from '@/features/Quizzes/slice/quizzesSlice';
-import userAuthSlice from '@/pages/Auth/slice/userLoginSlice';
 import { configureStore } from '@reduxjs/toolkit';
 import quizSlice from '@/features/Quiz/slice/quizSlice';
-
+import loginSlice from '@/pages/Auth/slice/LoginSlice';
 export const store = configureStore({
   reducer: {
-    auth: userAuthSlice,
+    auth: loginSlice,
     currentUser: currentUserReducer,
     quizzes: quizzesSlice,
     quiz: quizSlice,

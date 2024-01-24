@@ -26,7 +26,7 @@ import { Input } from '@/widgets/Input/input';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 import { loginUser } from '../service/loginUserService';
-import { resetLoginState } from '../slice/userLoginSlice';
+import { resetLoginState } from '../slice/LoginSlice';
 
 const formSchema = z.object({
   username: z.string().min(2, {

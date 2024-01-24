@@ -1,11 +1,9 @@
-import React from 'react';
-
-import { Navigate, createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 
 import { Quiz } from '@/features/Quiz';
 import { QuizzesPage } from '@/features/Quizzes';
 import { AboutPage } from '@/pages/AboutPage';
-import { AuthenticationPage } from '@/pages/Auth';
+import { LoginPage } from '@/pages/Auth';
 import MainLayout from '@/pages/MainLayout';
 import { MainPage } from '@/pages/MainPage';
 import { NotFoundPage } from '@/pages/NotFoundPage';
@@ -30,7 +28,7 @@ export const RoutePath: Record<AppRoutes, string> = {
 export const router = createBrowserRouter([
   {
     path: RoutePath.login,
-    element: <AuthenticationPage />,
+    element: <LoginPage />,
   },
   {
     path: '/',

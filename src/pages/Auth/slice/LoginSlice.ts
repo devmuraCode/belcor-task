@@ -17,7 +17,7 @@ const initialState: IInitialState = {
   success: false,
 };
 
-const authSlice = createSlice({
+const loginSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
@@ -45,5 +45,5 @@ const authSlice = createSlice({
   },
 });
 
-export default authSlice.reducer;
-export const { resetLoginState } = authSlice.actions;
+export default loginSlice.reducer;
+export const { resetLoginState } = loginSlice.actions;

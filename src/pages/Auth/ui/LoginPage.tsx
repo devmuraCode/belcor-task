@@ -6,7 +6,7 @@ import { buttonVariants } from '@/widgets/Button';
 
 import { UserAuthForm } from './userLoginForm';
 
-export default function AuthenticationPage() {
+export default function LoginPage() {
   return (
     <>
       <div className="md:hidden">
