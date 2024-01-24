@@ -1,10 +1,10 @@
-import { httpClient } from '@/core/httpClient';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-export const fetchProducts = createAsyncThunk(
+export const getQuizzes = createAsyncThunk(
   'products/fetchProducts',
   async () => {
-    const response = await httpClient.get('/quizzes');
+    const response = await axios.get('/quizzes');
     return response.data;
   },
 );

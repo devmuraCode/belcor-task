@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { fetchProducts } from '../service/getQuizzes';
+import { getQuizzes } from '../service/getQuizzes';
 import { ProductsState } from '../type/quizzes';
 
 const initialState: ProductsState = {
@@ -15,14 +15,14 @@ const quizzesSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchProducts.pending, (state) => {
+      .addCase(getQuizzes.pending, (state) => {
         state.loading = 'pending';
       })
-      .addCase(fetchProducts.fulfilled, (state, action) => {
+      .addCase(getQuizzes.fulfilled, (state, action) => {
         state.loading = 'succeeded';
         state.data = action.payload;
       })
-      .addCase(fetchProducts.rejected, (state, action) => {
+      .addCase(getQuizzes.rejected, (state, action) => {
         state.loading = 'failed';
         state.error = action.error.message || null;
       });
