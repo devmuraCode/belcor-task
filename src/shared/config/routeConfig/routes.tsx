@@ -26,18 +26,6 @@ export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.QUIZZES]: '/quizzes',
 };
 
-const isAuthenticated = () => {
-  return !!localStorage.getItem('token');
-};
-
-const ProtectedRoute: React.FC<{ element: React.ReactNode }> = ({
-  element,
-}) => {
-  if (!isAuthenticated()) {
-    return <Navigate to={RoutePath.login} />;
-  }
-  return <>{element}</>;
-};
 
 export const router = createBrowserRouter([
   {
@@ -50,11 +38,11 @@ export const router = createBrowserRouter([
     children: [
       {
         path: RoutePath.main,
-        element: <ProtectedRoute element={<MainPage />} />,
+        element:<MainPage />,
       },
       {
         path: RoutePath.about,
-        element: <ProtectedRoute element={<AboutPage />} />,
+        element: <AboutPage /> ,
       },
       {
         path: RoutePath.not_found,
@@ -62,11 +50,11 @@ export const router = createBrowserRouter([
       },
       {
         path: RoutePath.quizzes,
-        element: <ProtectedRoute element={<QuizzesPage />} />,
+        element: <QuizzesPage />,
       },
       {
         path: `${RoutePath.quizzes}/:quizName`,
-        element: <ProtectedRoute element={<Quiz />} />,
+        element: <Quiz />,
       },
     ],
   },

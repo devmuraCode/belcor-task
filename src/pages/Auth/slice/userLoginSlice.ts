@@ -3,10 +3,6 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import { loginUser } from '../service/loginUserService';
 
-const userToken = localStorage.getItem('userToken')
-  ? localStorage.getItem('userToken')
-  : null;
-
 interface IInitialState {
   loading: boolean;
   userInfo: ILoginUserResponse | null;
