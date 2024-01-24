@@ -23,11 +23,6 @@ export function Sidebar({ className }: SidebarProps) {
           {
             name: 'Main',
             path: RoutePath.main,
-            icon: <MusicIconSvg />,
-          },
-          {
-            name: 'About',
-            path: RoutePath.about,
             icon: <BrowseIconSvg />,
           },
           {

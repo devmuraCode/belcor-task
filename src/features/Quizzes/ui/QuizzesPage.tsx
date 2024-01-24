@@ -6,11 +6,11 @@ import {
   useAppDispatch,
   useAppSelector,
 } from '@/app/providers/storeProvider/store';
-import { fetchProducts } from '@/features/Quizzes/service/getQuizzes';
 import { RoutePath } from '@/shared/config/routeConfig/routes';
 import { Button } from '@/widgets/Button';
 
 import classes from './QuizzesPage.module.scss';
+import { getQuizzes } from '../service/getQuizzes';
 
 export const QuizzesPage = () => {
   const dispatch = useAppDispatch();
@@ -19,7 +19,7 @@ export const QuizzesPage = () => {
   const error = useAppSelector((state) => state.quizzes.error);
 
   useEffect(() => {
-    dispatch(fetchProducts());
+    dispatch(getQuizzes());
   }, [dispatch]);
 
   if (loading === 'pending') {
@@ -32,7 +32,6 @@ export const QuizzesPage = () => {
 
   return (
     <div>
-      <h1>Quizzes</h1>
 
       <div className={classes.quizzes}>
         {quizzes.map((quiz) => (
