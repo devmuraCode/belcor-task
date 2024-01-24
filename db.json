@@ -1,0 +1,126 @@
+{
+  "quizzes": [
+    {
+      "id": 1,
+      "name": "physics"
+    },
+    {
+      "id": 2,
+      "name": "chemistry"
+    },
+    {
+      "id": 3,
+      "name": "maths"
+    }
+  ],
+  "physics": [
+    {
+      "question": "Which device is required for the Internet connection?",
+      "option1": "Modem",
+      "option2": "Router",
+      "option3": "LAN Cabel",
+      "option4": "Pen Drive",
+      "ans": 1
+    },
+    {
+      "question": "Which device is required for the ?",
+      "option1": "Modem",
+      "option2": "Router",
+      "option3": "LAN Cabel",
+      "option4": "Pen Drive",
+      "ans": 2
+    },
+    {
+      "question": "Which  Internet connection?",
+      "option1": "Modem",
+      "option2": "Router",
+      "option3": "LAN Cabel",
+      "option4": "Pen Drive",
+      "ans": 5
+    },
+    {
+      "question": "Which device is required for the connection?",
+      "option1": "Modem",
+      "option2": "Router",
+      "option3": "LAN Cabel",
+      "option4": "Pen Drive",
+      "ans": 3
+    },
+    {
+      "question": "Which device is Internet connection?",
+      "option1": "Modem",
+      "option2": "Router",
+      "option3": "LAN Cabel",
+      "option4": "Pen Drive",
+      "ans": 2
+    }
+  ],
+  "chemistry": [
+    {
+      "question": "What is the first element on the periodic table?",
+      "option1": "Hydrogen",
+      "option2": "Carbon",
+      "option3": "Oxygen",
+      "option4": "Nitrogen",
+      "ans": 1
+    },
+    {
+      "question": "What is the centre of an atom called?",
+      "option1": "Hydrogen",
+      "option2": "Carbon",
+      "option3": "Oxygen",
+      "option4": "Nitrogen",
+      "ans": 2
+    },
+    {
+      "question": "What is the second element on the periodic table?",
+      "option1": "Hydrogen",
+      "option2": "Carbon",
+      "option3": "Oxygen",
+      "option4": "Nitrogen",
+      "ans": 3
+    },
+    {
+      "question": "What is the third element on the periodic table?",
+      "option1": "Hydrogen",
+      "option2": "Carbon",
+      "option3": "Oxygen",
+      "option4": "Nitrogen",
+      "ans": 4
+    },
+    {
+      "question": "What is the fourth element on the periodic table?",
+      "option1": "Hydrogen",
+      "option2": "Carbon",
+      "option3": "Oxygen",
+      "option4": "Nitrogen",
+      "ans": 1
+    }
+  ],
+  "maths": [
+    {
+      "question": "What is the sum of 130+125+191?",
+      "option1": "365",
+      "option2": "456",
+      "option3": "446",
+      "option4": "232",
+      "ans": 1
+    },
+    {
+      "question": " If we minus 712 from 1500, how much do we get?",
+      "option1": "778",
+      "option2": "123",
+      "option3": "343",
+      "option4": "43",
+      "ans": 3
+    },
+    {
+      "question": "50 times of 8 is equal to:",
+      "option1": "400",
+      "option2": "4000",
+      "option3": "40000",
+      "option4": "400000",
+      "ans": 4
+    }
+  ]
+}
