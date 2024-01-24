@@ -7,10 +7,11 @@ import {
   useAppSelector,
 } from '@/app/providers/storeProvider/store';
 import { RoutePath } from '@/shared/config/routeConfig/routes';
+import LoadingSpinner from '@/shared/ui/Loading/Loading';
 import { Button } from '@/widgets/Button';
 
-import classes from './QuizzesPage.module.scss';
 import { getQuizzes } from '../service/getQuizzes';
+import classes from './QuizzesPage.module.scss';
 
 export const QuizzesPage = () => {
   const dispatch = useAppDispatch();
@@ -22,17 +23,19 @@ export const QuizzesPage = () => {
     dispatch(getQuizzes());
   }, [dispatch]);
 
-  if (loading === true) {
-    return <div>Loading...</div>;
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-full h-screen  ">
+        <LoadingSpinner />
+      </div>
+    );
   }
-
   if (loading === false && error) {
     return <div>Error: {error}</div>;
   }
 
   return (
     <div>
-
       <div className={classes.quizzes}>
         {quizzes.map((quiz) => (
           <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">

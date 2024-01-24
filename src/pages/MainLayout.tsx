@@ -10,6 +10,7 @@ import { currentUserService } from '@/entities/user/service/currentUserService';
 import { RoutePath } from '@/shared/config/routeConfig/routes';
 import { Navbar } from '@/widgets/Navbar';
 import { Sidebar } from '@/widgets/Sidebar';
+import LoadingSpinner from '@/shared/ui/Loading/Loading';
 
 const MainLayout = () => {
   const navigate = useNavigate();
@@ -22,7 +23,11 @@ const MainLayout = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex justify-center items-center h-full h-screen">
+        <LoadingSpinner />
+      </div>
+    );
   }
 
   if (!currentUser) {
