@@ -7,7 +7,6 @@ import {
   useAppSelector,
 } from '@/app/providers/storeProvider/store';
 import { IQuizResponse } from '@/features/Quiz/type/quiz';
-import { PhysicsData } from '@/shared/assets/data/data';
 
 import { getQuiz } from '../service/getQuiz';
 import classes from './Quiz.module.scss';
@@ -99,7 +98,6 @@ export const Quiz: FC<TProps> = () => {
   return (
     <div className={classes.container}>
       {loading && <h1>Loading...</h1>}
-      <h1>Quiz</h1>
       <hr />
       {result ? (
         <></>
@@ -144,14 +142,14 @@ export const Quiz: FC<TProps> = () => {
           </ul>
           <button onClick={next}>Next</button>
           <div className="index">
-            {index + 1} of {PhysicsData.length} questions
+            {index + 1} of {quiz.length} questions
           </div>
         </>
       )}
       {result ? (
         <>
           <h2>
-            Your Score {score} out of {PhysicsData.length}
+            Your Score {score} out of {quiz.length}
           </h2>
           <button onClick={reset}>Result</button>
         </>
