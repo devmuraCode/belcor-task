@@ -5,6 +5,6 @@ interface Product {
 
 export interface ProductsState {
   data: Product[];
-  loading: 'idle' | 'pending' | 'succeeded' | 'failed';
+  loading: boolean;
   error: string | null;
 }

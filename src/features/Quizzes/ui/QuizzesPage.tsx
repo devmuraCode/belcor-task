@@ -22,11 +22,11 @@ export const QuizzesPage = () => {
     dispatch(getQuizzes());
   }, [dispatch]);
 
-  if (loading === 'pending') {
+  if (loading === true) {
     return <div>Loading...</div>;
   }
 
-  if (loading === 'failed') {
+  if (loading === false && error) {
     return <div>Error: {error}</div>;
   }
 

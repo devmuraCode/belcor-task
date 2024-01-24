@@ -5,7 +5,7 @@ import { ProductsState } from '../type/quizzes';
 
 const initialState: ProductsState = {
   data: [],
-  loading: 'idle',
+  loading: true,
   error: null,
 };
 
@@ -16,14 +16,14 @@ const quizzesSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getQuizzes.pending, (state) => {
-        state.loading = 'pending';
+        state.loading = true;
       })
       .addCase(getQuizzes.fulfilled, (state, action) => {
-        state.loading = 'succeeded';
+        state.loading = false;
         state.data = action.payload;
       })
       .addCase(getQuizzes.rejected, (state, action) => {
-        state.loading = 'failed';
+        state.loading = false;
         state.error = action.error.message || null;
       });
   },
