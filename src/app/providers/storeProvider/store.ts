@@ -7,7 +7,7 @@ import quizSlice from '@/features/Quiz/slice/quizSlice';
 import loginSlice from '@/pages/Auth/slice/LoginSlice';
 export const store = configureStore({
   reducer: {
-    auth: loginSlice,
+    login: loginSlice,
     currentUser: currentUserReducer,
     quizzes: quizzesSlice,
     quiz: quizSlice,

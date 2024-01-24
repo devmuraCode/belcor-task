@@ -38,7 +38,7 @@ const formSchema = z.object({
 });
 
 export function UserAuthForm() {
-  const { loading, userInfo, error } = useAppSelector((state) => state.auth);
+  const { loading, userInfo, error } = useAppSelector((state) => state.login);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 

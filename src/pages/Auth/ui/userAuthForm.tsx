@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { authUser } from '@/features/Auth/service/authUser';
-import { useAppDispatch, useAppSelector } from '@/store/store';
 import { Button } from '@/widgets/Button';
 import {
   Form,
@@ -19,6 +18,7 @@ import {
 } from '@/widgets/Form/Form';
 import { Input } from '@/widgets/Input/input';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useAppDispatch, useAppSelector } from '@/app/providers/storeProvider/store';
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -31,7 +31,7 @@ const formSchema = z.object({
 
 export function UserAuthForm() {
   const dispatch = useAppDispatch();
-  const authSlice = useAppSelector((state) => state.auth);
+  const authSlice = useAppSelector((state) => state.login);
   const navigate = useNavigate();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),

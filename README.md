@@ -18,7 +18,9 @@ npm install
 ## Run application
 
 npm run dev
+## Run json-servers
 
+json-server --watch db.json --port 3001
 ## Used
 
 1. [json server](https://www.npmjs.com/package/json-server)
